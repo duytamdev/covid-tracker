@@ -1,0 +1,7 @@
+.app__header{
+    display: flex;
+    align-items: center;
+    background: aqua;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
