@@ -4,6 +4,7 @@ import ReduxDispatcher from '../../appRedux/ReduxDispatcher';
 import Actions from '../../appRedux/actions';
 
 export default function () {
+  console.log('Hello');
   const [countries, setCountries] = useState([]);
   const fetchCountries = () => {
     const options = {
