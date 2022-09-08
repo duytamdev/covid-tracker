@@ -1,0 +1,15 @@
+.table-cases{
+    margin-top: 20px;
+    overflow-y: scroll;
+    height: 300px;
+}
+.table-cases tr{
+    display: flex;
+    justify-content: space-between;
+}
+.table-cases td{
+    padding: 0.5rem;
+}
+.table-cases tr:nth-child(even){
+    background-color: #f5f6fa;
+}

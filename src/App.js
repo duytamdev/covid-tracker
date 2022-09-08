@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage';
 import { dispatchRef } from './appRedux/ReduxDispatcher';
 
 function App() {
-  if (process.env.REACT_APP_ENVIRONMENT === 'development') {
+  if (process.env.REACT_APP_ENVIRONMENT === 'production') {
     console.log = () => {};
     console.error = () => {};
     console.debug = () => {};

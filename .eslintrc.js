@@ -23,5 +23,6 @@ module.exports = {
     'no-console': 'off',
     'react-function-component-definition': 'off',
     'func-names': 'off',
+    'react/prop-types': 'off',
   },
 };

@@ -2,5 +2,11 @@ import API from '../../utils/apiConfig';
 
 const getAllCountriesAPI = () => API.get('/v3/covid-19/countries');
 const getCovidDataByCountryAPI = (country) => API.get(`/v3/covid-19/countries/${country}`);
-
-export { getAllCountriesAPI, getCovidDataByCountryAPI };
+const getCovidDataWordWideAPI = () => API.get('/v3/covid-19/all');
+const getGlobalHistoricalAPI = () => API.get('/v3/covid-19/historical/all?lastdays=30');
+export {
+  getAllCountriesAPI,
+  getCovidDataByCountryAPI,
+  getCovidDataWordWideAPI,
+  getGlobalHistoricalAPI,
+};

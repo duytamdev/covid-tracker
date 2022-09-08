@@ -1,7 +1,32 @@
-.app__header{
+.home-page{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.home-page__left{
+    flex: 0.8;
+}
+.home-page__right{
+
+}
+.home-page__header{
     display: flex;
     align-items: center;
-    background: aqua;
     margin-bottom: 20px;
     justify-content: space-between;
+}
+.home-page__stats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .home-page{
+        flex-direction: column;
+    }
+    .home-page__left{
+        margin-bottom: 20px;
+    }
 }
