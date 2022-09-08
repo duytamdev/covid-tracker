@@ -24,5 +24,6 @@ module.exports = {
     'react-function-component-definition': 'off',
     'func-names': 'off',
     'react/prop-types': 'off',
+    'import/no-unresolved': 'off',
   },
 };

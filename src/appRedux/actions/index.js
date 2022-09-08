@@ -8,6 +8,7 @@ const TYPES_ACTIONS = {
   getAllCountries: 'GET_ALL_COUNTRIES',
   getCovidDataCountry: 'GET_COVID_DATA_COUNTRY',
   getCovidDataWorldwide: 'GET_COVID_DATA_WORLDWIDE',
+  getHistoricalWorldwide: 'GET_HISTORICAL_WORLDWIDE',
 };
 export {
   _onSuccess, _onFail, _onUnmount, TYPES_ACTIONS,
@@ -23,6 +24,10 @@ const Actions = {
   }),
   getCovidWorldwide: (payload) => ({
     type: TYPES_ACTIONS.getCovidDataWorldwide,
+    payload,
+  }),
+  getHistoricalWorldwide: (payload) => ({
+    type: TYPES_ACTIONS.getHistoricalWorldwide,
     payload,
   }),
 };

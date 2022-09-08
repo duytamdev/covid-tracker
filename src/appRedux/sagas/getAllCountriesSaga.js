@@ -1,6 +1,6 @@
 import { call, takeLatest } from 'redux-saga/effects';
-import { TYPES_ACTIONS } from '../actions';
-import { getAllCountriesAPI } from '../api';
+import { getAllCountriesAPI } from '@appRedux/api';
+import { TYPES_ACTIONS } from '@appRedux/actions';
 
 function* getAllCountriesSaga({ payload }) {
   const { callback = () => {} } = payload;

@@ -1,4 +1,4 @@
-import API from '../../utils/apiConfig';
+import API from '@appUtils/apiConfig';
 
 const getAllCountriesAPI = () => API.get('/v3/covid-19/countries');
 const getCovidDataByCountryAPI = (country) => API.get(`/v3/covid-19/countries/${country}`);

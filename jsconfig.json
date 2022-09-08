@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "baseUrl": "./src",
+    "paths": {
+      "@appRedux/*": ["appRedux/*"],
+      "@appPages/*": ["pages/*"],
+      "@appUtils/*": ["utils/*"]
+    }
+  },
+  "include": [
+    "src"
+  ]
+}

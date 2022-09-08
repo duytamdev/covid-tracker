@@ -1,6 +1,6 @@
 import { takeLatest, call } from 'redux-saga/effects';
-import { TYPES_ACTIONS } from '../actions';
-import { getCovidDataByCountryAPI, getCovidDataWordWideAPI } from '../api';
+import { getCovidDataByCountryAPI, getCovidDataWordWideAPI } from '@appRedux/api';
+import { TYPES_ACTIONS } from '@appRedux/actions';
 
 function* getCovidWorldwideSaga({ payload }) {
   const { callback = () => {} } = payload;
