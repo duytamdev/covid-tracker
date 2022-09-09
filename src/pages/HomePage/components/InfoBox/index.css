@@ -1,15 +1,32 @@
 .info-box{
     flex: 1;
-    margin-left: 1%;
-    margin-right: 1%;
+}
+.info-box:not(:last-child){
+    margin-right: 10px;
+}
+.info-box--selected{
+    border-top: #28a745 solid 10px;
+}
+.info-box--red{
+    border-color: #c9302c;
+}
+.info-box:hover{
+    cursor: pointer;
 }
 .info-box__title{
 
 }
 .info-box__cases{
-
+    color: #c9302c;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.info-box__cases--green{
+    color: #28a745;
 }
 .info-box__total{
-
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 15px;
 }
 

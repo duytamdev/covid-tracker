@@ -1,31 +1,25 @@
 import React from 'react';
 import './index.css';
+import { formatNumber, sortData } from '../../../../utils/helper';
 
-const sortData = (data) => {
-  const sortedData = [...data];
-  sortedData.sort((a, b) => {
-    if (a.cases > b.cases) {
-      return -1;
-    }
-    return 1;
-  });
-  return sortedData;
-};
 function TableCases({ countries }) {
   return (
     <div className="table-cases">
+      <div className="table-cases__header">
+        <h3>Country</h3>
+        <h3>Cases</h3>
+      </div>
       {
             sortData(countries).map(({ name, cases }) => (
-              <tr>
-                <td>{name}</td>
-                <strong>
-                  <td>{cases}</td>
-                </strong>
-              </tr>
+              <div className="table-cases__item" key={name}>
+                <h7 className="table-cases__item__name">{name}</h7>
+                <h5 className="table-cases__item__cases">{formatNumber(cases)}</h5>
+              </div>
             ))
-        }
+      }
     </div>
+
   );
 }
 
-export default TableCases;
+export default React.memo(TableCases);

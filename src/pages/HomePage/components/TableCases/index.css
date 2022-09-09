@@ -3,13 +3,17 @@
     overflow-y: scroll;
     height: 300px;
 }
-.table-cases tr{
+.table-cases__header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.table-cases__item{
+    padding: 0.5rem;
     display: flex;
     justify-content: space-between;
 }
-.table-cases td{
-    padding: 0.5rem;
-}
-.table-cases tr:nth-child(even){
+.table-cases__item:nth-child(even){
     background-color: #f5f6fa;
 }

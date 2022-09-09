@@ -1,6 +1,6 @@
 import { takeLatest, call } from 'redux-saga/effects';
-import { getGlobalHistoricalAPI } from '@appRedux/api';
-import { TYPES_ACTIONS } from '@appRedux/actions';
+import { getGlobalHistoricalAPI } from '../api';
+import { TYPES_ACTIONS } from '../actions';
 
 function* getHistoricalWordWideSaga({ payload }) {
   const { callback = () => {} } = payload;

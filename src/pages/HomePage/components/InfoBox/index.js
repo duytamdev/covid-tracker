@@ -1,15 +1,22 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 import './index.css';
+import { prettyPrintStat } from '../../../../utils/helper';
 
-function InfoBox({ title, cases, total }) {
+function InfoBox({
+  title, cases, total, onClick, isRed, active,
+}) {
   return (
-    <Card className="info-box">
+    <Card
+      style={{ boxShadow: 'none' }}
+      onClick={onClick}
+      className={`info-box ${active && 'info-box--selected'} ${isRed && 'info-box--red'}`}
+    >
       <CardContent>
         <Typography className="info-box__title" color="textSecondary">{title}</Typography>
-        <h2 className="info-box__cases">{cases}</h2>
+        <h2 className={`info-box__cases ${!isRed && 'info-box__cases--green'}`}>{prettyPrintStat(cases)}</h2>
         <Typography className="info-box__total" color="textSecondary">
-          {total}
+          {prettyPrintStat(total)}
           {' '}
           Total
         </Typography>
