@@ -4,3 +4,7 @@ export const CASE_TYPES = {
   recovered: 'recovered',
   deaths: 'deaths',
 };
+export const ENV = {
+  REACT_APP_ENVIRONMENT: 'production',
+  REACT_APP_BASE_URL: 'https://disease.sh',
+};

@@ -4,9 +4,10 @@ import { Provider } from 'react-redux';
 import store from './appRedux/store';
 import HomePage from './pages/HomePage';
 import { dispatchRef } from './appRedux/ReduxDispatcher';
+import { ENV } from './utils/appConstants';
 
 function App() {
-  if (process.env.REACT_APP_ENVIRONMENT === 'production') {
+  if (ENV.REACT_APP_ENVIRONMENT === 'production') {
     console.log = () => {};
     console.error = () => {};
     console.debug = () => {};

@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { ENV } from '../appConstants';
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_BASE_URL,
+  baseURL: ENV.REACT_APP_BASE_URL,
 });
 export default API;
