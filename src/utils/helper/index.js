@@ -1,46 +1,18 @@
 import numeral from 'numeral';
 import { Circle, Popup } from 'react-leaflet';
+import { CategoryScale } from 'chart.js';
+import Chart from 'chart.js/auto';
 
+Chart.register(CategoryScale);
 export const optionsLineGraph = {
-  legend: {
-    display: false,
-  },
-  elements: {
-    point: {
-      radius: 0,
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top',
     },
   },
-  maintainAspectRatio: false,
-  tooltips: {
-    mode: 'index',
-    intersect: false,
-  },
-  scales: {
-    xAxes: [
-      {
-        type: 'time',
-        time: {
-          format: 'MM/DD/YY',
-          tooltipFormat: 'll',
-        },
-      },
-    ],
-    yAxes: [
-      {
-        gridLines: {
-          display: false,
-        },
-        ticks: {
-          // Include a dollar sign in the ticks
-          callback(value) {
-            return numeral(value).format('0a');
-          },
-        },
-      },
-    ],
-  },
 };
-const casesTypeColors = {
+export const casesTypeColors = {
   cases: {
     hex: '#CC1034',
     rgb: 'rgb(204, 16, 52)',

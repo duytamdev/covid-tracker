@@ -53,9 +53,9 @@ function HomePage({
 
         </div>
         <div className="home-page__stats">
-          <InfoBox isRed active={caseTypeSelected === CASE_TYPES.cases} onClick={() => onClickChangeTypeCase(CASE_TYPES.cases)} title="typeCase.cases" cases={countryData?.todayCases} total={countryData?.cases} />
-          <InfoBox active={caseTypeSelected === CASE_TYPES.recovered} onClick={() => onClickChangeTypeCase(CASE_TYPES.recovered)} title="typeCase.recovered" cases={countryData?.todayRecovered} total={countryData?.recovered} />
-          <InfoBox isRed active={caseTypeSelected === CASE_TYPES.deaths} onClick={() => onClickChangeTypeCase(CASE_TYPES.deaths)} title="typeCase.deaths" cases={countryData?.todayDeaths} total={countryData?.deaths} />
+          <InfoBox typeCase={CASE_TYPES.cases} active={caseTypeSelected === CASE_TYPES.cases} onClick={() => onClickChangeTypeCase(CASE_TYPES.cases)} title="typeCase.cases" cases={countryData?.todayCases} total={countryData?.cases} />
+          <InfoBox typeCase={CASE_TYPES.recovered} active={caseTypeSelected === CASE_TYPES.recovered} onClick={() => onClickChangeTypeCase(CASE_TYPES.recovered)} title="typeCase.recovered" cases={countryData?.todayRecovered} total={countryData?.recovered} />
+          <InfoBox typeCase={CASE_TYPES.deaths} active={caseTypeSelected === CASE_TYPES.deaths} onClick={() => onClickChangeTypeCase(CASE_TYPES.deaths)} title="typeCase.deaths" cases={countryData?.todayDeaths} total={countryData?.deaths} />
         </div>
         <MapCases
           countries={mapCountries}
