@@ -5,7 +5,8 @@
     "recovered": "Số ca hồi phục",
     "deaths": "Số ca tử vong"
   },
-  "total": "Tổng cộng",
+  "totalCase": "Tổng cộng {{cases}} ca",
   "liveCases": "Số ca nhiễm mới tại các nước",
-  "country": "Quốc gia"
+  "country": "Quốc gia",
+  "workCase": "{{typeCase}} trên toàn thế giới"
 }

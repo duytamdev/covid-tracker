@@ -32,6 +32,7 @@ function HomePage({
           <h1>{t('title')}</h1>
           <FormGroup>
             <Select
+              style={{ marginBottom: '10px' }}
               onChange={onChangeLanguage}
               value={currentLanguage === 'vi' ? 'vi' : 'en'}
             >

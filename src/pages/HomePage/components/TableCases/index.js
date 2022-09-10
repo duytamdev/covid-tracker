@@ -8,8 +8,8 @@ function TableCases({ countries }) {
   return (
     <div className="table-cases">
       <div className="table-cases__header">
-        <h3>{t('country')}</h3>
-        <h3>{t('typeCase.cases')}</h3>
+        <h4>{t('country')}</h4>
+        <h4>{t('typeCase.cases')}</h4>
       </div>
       {
             sortData(countries).map(({ name, cases }) => (

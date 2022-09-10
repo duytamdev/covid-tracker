@@ -5,6 +5,8 @@
     "recovered": "Recovered",
     "deaths": "Deaths"
   },
-  "total": "Total",
-  "liveCases": "Live cases by country"
+  "totalCase": "{{cases}} Total",
+  "liveCases": "Live cases by country",
+  "workCase": "Work cases new {{typeCase}}"
+
 }
