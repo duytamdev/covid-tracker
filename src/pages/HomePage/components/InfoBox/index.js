@@ -15,7 +15,7 @@ function InfoBox({
       className={`info-box ${active && 'info-box--selected'} ${isRed && 'info-box--red'}`}
     >
       <CardContent>
-        <Typography className="info-box__title" color="textSecondary">{title}</Typography>
+        <Typography className="info-box__title" color="textSecondary">{t(title)}</Typography>
         <h2 className={`info-box__cases ${!isRed && 'info-box__cases--green'}`}>{prettyPrintStat(cases)}</h2>
         <Typography className="info-box__total" color="textSecondary">
           {t('totalCase', { cases: prettyPrintStat(total) })}

@@ -9,6 +9,7 @@ import LineGraph from './components/LineGraph';
 import MapCases from './components/MapCases';
 import 'leaflet/dist/leaflet.css';
 import { CASE_TYPES } from '../../utils/appConstants';
+// eslint-disable-next-line import/order
 import { useTranslation } from 'react-i18next';
 
 function HomePage({
@@ -52,9 +53,9 @@ function HomePage({
 
         </div>
         <div className="home-page__stats">
-          <InfoBox isRed active={caseTypeSelected === CASE_TYPES.cases} onClick={() => onClickChangeTypeCase(CASE_TYPES.cases)} title={t('typeCase.cases')} cases={countryData?.todayCases} total={countryData?.cases} />
-          <InfoBox active={caseTypeSelected === CASE_TYPES.recovered} onClick={() => onClickChangeTypeCase(CASE_TYPES.recovered)} title={t('typeCase.recovered')} cases={countryData?.todayRecovered} total={countryData?.recovered} />
-          <InfoBox isRed active={caseTypeSelected === CASE_TYPES.deaths} onClick={() => onClickChangeTypeCase(CASE_TYPES.deaths)} title={t('typeCase.deaths')} cases={countryData?.todayDeaths} total={countryData?.deaths} />
+          <InfoBox isRed active={caseTypeSelected === CASE_TYPES.cases} onClick={() => onClickChangeTypeCase(CASE_TYPES.cases)} title="typeCase.cases" cases={countryData?.todayCases} total={countryData?.cases} />
+          <InfoBox active={caseTypeSelected === CASE_TYPES.recovered} onClick={() => onClickChangeTypeCase(CASE_TYPES.recovered)} title="typeCase.recovered" cases={countryData?.todayRecovered} total={countryData?.recovered} />
+          <InfoBox isRed active={caseTypeSelected === CASE_TYPES.deaths} onClick={() => onClickChangeTypeCase(CASE_TYPES.deaths)} title="typeCase.deaths" cases={countryData?.todayDeaths} total={countryData?.deaths} />
         </div>
         <MapCases
           countries={mapCountries}
