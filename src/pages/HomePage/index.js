@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import HomePage from './view';
 import ReduxDispatcher from '../../appRedux/ReduxDispatcher';
 import Actions from '../../appRedux/actions';
@@ -6,6 +7,7 @@ import { CASE_TYPES } from '../../utils/appConstants';
 
 const MAP_CENTER_WORLDWIDE = [34.80746, -40.4796];
 export default function () {
+  const { i18n } = useTranslation();
   const [countries, setCountries] = useState([]);
   const [mapCountries, setMapCountries] = useState([]);
   const [countrySelected, setCountrySelected] = useState('worldwide');
@@ -39,7 +41,7 @@ export default function () {
     };
     ReduxDispatcher({ ...Actions.getAllCountries(options) });
   };
-  const handleCountryChange = async (event) => {
+  const handleCountryChange = (event) => {
     const country = event.target.value;
     setCountrySelected(country);
   };
@@ -65,6 +67,10 @@ export default function () {
     };
     ReduxDispatcher({ ...Actions.getCovidWorldwide(options) });
   };
+  const handleChangeLanguage = async (event) => {
+    const language = event.target.value;
+    await i18n.changeLanguage(language);
+  };
   useEffect(() => {
     fetchCountries();
     return () => {
@@ -81,13 +87,14 @@ export default function () {
 
   return (
     <HomePage
+      onChangeLanguage={handleChangeLanguage}
       caseTypeSelected={caseTypeSelected}
       onClickChangeTypeCase={handleChangeTypeCase}
       mapCountries={mapCountries}
       mapZoom={mapZoom}
       mapCenter={mapCenter}
       countryData={countryData}
-      handleCountryChange={handleCountryChange}
+      onChangeCountry={handleCountryChange}
       countrySelected={countrySelected}
       setCountrySelected={setCountrySelected}
       countries={countries}

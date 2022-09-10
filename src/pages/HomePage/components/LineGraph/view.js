@@ -12,19 +12,22 @@ function LineGraph({ dataChart, caseType }) {
         {caseType}
       </h3>
       {dataChart?.length > 0 && (
-      <Line
-        data={{
-          datasets: [
-            {
-              labels: 'Cases',
-              backgroundColor: 'rgba(204, 16, 52, 0.5)',
-              borderColor: '#CC1034',
-              data: dataChart,
-            },
-          ],
-        }}
-        options={optionsLineGraph}
-      />
+      <div className="line-graph__chart">
+        <Line
+          data={{
+            datasets: [
+              {
+                labels: 'Cases',
+                backgroundColor: 'rgba(204, 16, 52, 0.5)',
+                borderColor: '#CC1034',
+                data: dataChart,
+              },
+            ],
+          }}
+          options={optionsLineGraph}
+        />
+      </div>
+
       )}
     </div>
   );

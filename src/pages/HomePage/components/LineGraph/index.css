@@ -4,3 +4,6 @@
 .line-graph__title{
     margin-bottom: 20px;
 }
+.line-graph__chart{
+    height: 250px;
+}
