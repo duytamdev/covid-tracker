@@ -1,0 +1,13 @@
+{
+  "title": "Theo dõi tình hình dịch bệnh COVID-19",
+  "typeCase": {
+    "cases": "Số ca nhiễm",
+    "recovered": "Số ca hồi phục",
+    "deaths": "Số ca tử vong"
+  },
+  "numberCase": "Số ca",
+  "totalCase": "Tổng cộng {{cases}} ca",
+  "liveCases": "Số ca nhiễm mới tại các nước",
+  "country": "Quốc gia",
+  "workCase": "{{typeCase}} trên toàn thế giới"
+}

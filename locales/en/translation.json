@@ -1,0 +1,13 @@
+{
+  "title": "Covid-19 Tracker",
+  "typeCase": {
+    "cases": "Cases",
+    "recovered": "Recovered",
+    "deaths": "Deaths"
+  },
+  "numberCase": "cases",
+  "totalCase": "{{cases}} Total",
+  "liveCases": "Live cases by country",
+  "workCase": "Work cases new {{typeCase}}"
+
+}
